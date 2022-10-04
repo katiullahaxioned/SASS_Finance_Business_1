@@ -1,0 +1,59 @@
+.analysis {
+  &__wrapper {
+    width: 100%;
+    padding: 153px 5% 136px;
+    border-bottom: 1px solid $offWhite;
+    @include flex-common(flex-start, space-between);
+  }
+
+  &__lists {
+    gap: 11px;
+    @include display-flex;
+    @include flex-basis(31.5%);
+    @include flex-direction(column);
+
+    li {
+      padding: 34px 33px;
+      background-color: $greenLight;
+      cursor: pointer;
+      @include flex-common(center, space-between);
+
+      > * { @include transition; }
+
+      &:first-child > * { color: $white; }
+
+      &:hover > * { color: $white; }
+    }
+
+    &--icon {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      font-size: 20px;
+      text-indent: -99999px;
+      
+      &::before {
+        @include fontAwesome(map-get($fontAwesome, right));
+        left: 75%;
+      }
+    }
+  }
+
+  &__desc {
+    @include flex-basis(63%);
+
+    li {
+      @include display-flex;
+      @include flex-direction(column);
+
+      &:not(:first-child) { display: none; }
+    }
+
+    .card-title { margin: 29px 0 0; }
+
+    .section-para {
+      margin: 17px 0;
+      color: $greyLight;
+    }
+  }
+}

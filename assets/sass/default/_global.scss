@@ -33,6 +33,14 @@ textarea {
 p { line-height: 2; }
 p::first-letter { text-transform: uppercase; }
 
+.card-title {
+  color: $black;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1366px;
