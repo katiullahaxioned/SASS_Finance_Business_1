@@ -1,0 +1,15 @@
+.client {
+  &__wrapper {
+    width: 100%;
+    padding: 63px 9% 65px;
+    background-color: $offWhite;
+  }
+
+  &__lists {
+    @include flex-common(center, space-between);
+
+    li {
+      @include flex-basis(15.5%);
+    }
+  }
+}

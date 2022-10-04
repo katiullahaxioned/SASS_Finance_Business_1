@@ -623,4 +623,25 @@ p::first-letter {
   text-align: center;
 }
 
+.client__wrapper {
+  width: 100%;
+  padding: 63px 9% 65px;
+  background-color: #F7F7F7;
+}
+.client__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.client__lists li {
+  -ms-flex-preferred-size: 15.5%;
+  flex-basis: 15.5%;
+}
+
 /*# sourceMappingURL=style.css.map */
