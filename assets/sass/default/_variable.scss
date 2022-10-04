@@ -1,13 +1,11 @@
 // ===== Colors ===== //
-$colors: (
-  black: #000,
-  white: #fff,
-  offWhite: #F7F7F7,
-  greenLight: #A4C63A,
-  greyLight: #555,
-  greyMid: #343434,
-  greyDark: #232323,
-);
+$black: #000;
+$white: #fff;
+$offWhite: #F7F7F7;
+$greenLight: #A4C63A;
+$greyLight: #555;
+$greyMid: #343434;
+$greyDark: #232323;
 
 // ===== FontAwesome ===== //
 $fontAwesome: (
@@ -17,10 +15,10 @@ $fontAwesome: (
 );
 
 $social: (
-  facebook: \f09a,
-  twitter: \f099,
-  linkedin: \f0e1,
-  behance: \f1b4,
+  1: \f09a,
+  2: \f099,
+  3: \f0e1,
+  4: \f1b4,
 );
 
 // ===== Breakpoints ===== //

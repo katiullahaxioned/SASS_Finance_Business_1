@@ -1,0 +1,159 @@
+.header {
+  text-transform: capitalize;
+
+  &__top {
+    &--wrapper {
+      width: 100%;
+      padding: 0 4.6%;
+      background-color: $greenLight;
+      @include flex-common(center, space-between);
+    }
+
+    &--details {
+      margin-left: 4px;
+      @include flex-common;
+
+      li {
+        border-right: 1px solid $offWhite;
+
+        &:first-child { border-left: 1px solid $offWhite; }
+      }
+
+      span{
+        padding: 14px 25px;
+        color: $white;
+        font-size: 15px;
+        font-weight: 600
+      }
+
+      a {
+        @extend span;
+
+        &:hover { color: $greyLight; }
+      }
+
+      span::before,
+      a::before {
+        margin-right: 12px;
+        font-size: 19px;
+        font-weight: 300;
+      }
+
+      span::before {
+        @include relative-icon(map-get($fontAwesome, time));
+      }
+      
+      a::before {
+        @include relative-icon(map-get($fontAwesome, phone));
+      }
+    }
+
+    &--social {
+      @include flex-common;
+
+      li {
+        border-right: 1px solid $offWhite;
+
+        &:first-child { border-left: 1px solid $offWhite; }
+      }
+
+      a {
+        width: 50px;
+        padding: 12px 0;
+        position: relative;
+        color: $white;
+        font-size: 18px;
+        text-indent: -99999px;
+
+        &:hover { color: $greyLight; }
+      }
+
+      @include socialIcon($social);
+    }
+  }
+
+  &__bottom {
+    &--wrapper {
+      width: 100%;
+      padding: 29px 3.85%;
+      @include flex-common(center, space-between);
+    }
+
+    &--logo {
+      @include transform(scale(1.1));
+      @include transform-origin(top left);
+    }
+
+    &--hamburger {  
+      width: 30px;
+      height: 30px;
+      display: none;
+      overflow: hidden;
+      position: relative;
+      z-index: 4;
+      cursor: pointer;
+        
+      .bar {
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $greenLight;
+        text-indent: -99999px;
+        @include position(absolute, top, 50%, left, 0);
+        @include transform(translateY(-50%));
+        @include transition;
+    
+        &::before,
+        &::after {
+          content: '';
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+          position: absolute;
+          left: 0;
+          background-color: inherit;
+          @include transition;
+        }
+        
+        &::before { top: -13px; }
+        &::after { top: 13px; }
+      }
+  
+      &:hover {
+        .bar {
+          @include transform(translateY(-50%) rotate(135deg));
+         
+          &::before { display: none; }
+          
+          &::after {
+            top: 0;
+            @include transform(rotate(-270deg));
+          }
+        }
+      } 
+    }
+
+    &--menu {
+      margin-right: 39px;
+      gap: 36px;
+      @include flex-common;
+
+      a {
+        padding: 8px;
+        border-bottom: 3px solid transparent;
+        color: $white;
+        font-size: 17px;
+        
+        &[title="Our services"] {
+          color: $greenLight;
+          border-color: $greenLight;
+        }
+
+        &:hover {
+          color: $greenLight;
+          border-color: $greenLight;
+        }
+      }
+    }
+  }
+}

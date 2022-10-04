@@ -61,7 +61,7 @@
   align-items: $value;
 }
 
-@mixin flex-center($align: center, $justify: center) {
+@mixin flex-common($align: center, $justify: center) {
   @include display-flex;
   @include align-items($align);
   @include justify-content($justify);
@@ -189,6 +189,19 @@
   -webkit-transform: $value;
   -ms-transform: $value;
   transform: $value;
+}
+
+@mixin transform-origin($value) {
+  -webkit-transform-origin: $value;
+  -ms-transform-origin: $value;
+  transform-origin: $value;
+
+}
+
+@mixin relative-icon($content) {
+  content: '#{$content}';
+  font-family: 'fontAwesome';
+  text-indent: 0;
 }
 
 @mixin fontAwesome($content) {
