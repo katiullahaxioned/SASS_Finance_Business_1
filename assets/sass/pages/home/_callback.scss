@@ -1,0 +1,47 @@
+.callback {
+  &__wrapper { padding: 145px 0 154px; }
+
+  &__form {
+    padding: 65px;
+    border-radius: 5px;
+    background-color: $greenLight;
+    gap: 38px;
+    @include display-flex;
+    @include flex-direction(column);
+
+    &--top {
+      gap: 33px;
+      @include display-flex;
+
+      > * {
+        @include flex-basis(32%);
+      }
+    }
+
+    &--group,
+    &--textarea {
+      * {
+        width: 100%;
+        padding: 15px 17px;
+        border-radius: 25px;
+        background-color: $white;
+  
+        &::placeholder {
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    &--textarea {
+      * {
+        min-height: 130px;
+        color: $greyLight;
+        resize: vertical;
+      }
+    }
+
+    &--control { text-align: center; }
+  }
+}

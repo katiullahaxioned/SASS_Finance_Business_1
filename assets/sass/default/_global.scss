@@ -41,6 +41,52 @@ p::first-letter { text-transform: uppercase; }
   text-transform: capitalize;
 }
 
+.section-heading {
+  color: $black;
+  font-size: 39px;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: 1px;
+
+  &::first-letter { text-transform: uppercase; }
+  
+  span {
+    display: inline;
+    &:last-child { color: $greenLight; }
+  }
+}
+
+.section-sub-heading {
+  margin: 6px 0 90px;
+  color: $greyLight;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.more-button {
+  input {
+    padding: 11px 30px;
+    border: 2px solid $white;
+    border-radius: 30px;
+    background-color: transparent;
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    @include transition;
+
+    &:hover {
+      background-color: $white;
+      color: $greenLight;
+    }
+  }
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1366px;

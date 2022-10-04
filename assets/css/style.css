@@ -143,6 +143,53 @@ p::first-letter {
   text-transform: capitalize;
 }
 
+.section-heading {
+  color: #000;
+  font-size: 39px;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: 1px;
+}
+.section-heading::first-letter {
+  text-transform: uppercase;
+}
+.section-heading span, .section-heading .header__top--details a, .header__top--details .section-heading a {
+  display: inline;
+}
+.section-heading span:last-child, .section-heading .header__top--details a:last-child, .header__top--details .section-heading a:last-child {
+  color: #A4C63A;
+}
+
+.section-sub-heading {
+  margin: 6px 0 90px;
+  color: #777;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.more-button input {
+  padding: 11px 30px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.more-button input:hover {
+  background-color: #fff;
+  color: #A4C63A;
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1366px;
@@ -528,6 +575,52 @@ p::first-letter {
 .analysis__desc .section-para {
   margin: 17px 0;
   color: #777;
+}
+
+.callback__wrapper {
+  padding: 145px 0 154px;
+}
+.callback__form {
+  padding: 65px;
+  border-radius: 5px;
+  background-color: #A4C63A;
+  gap: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.callback__form--top {
+  gap: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.callback__form--top > * {
+  -ms-flex-preferred-size: 32%;
+  flex-basis: 32%;
+}
+.callback__form--group *, .callback__form--textarea * {
+  width: 100%;
+  padding: 15px 17px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+.callback__form--group *::placeholder, .callback__form--textarea *::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.callback__form--textarea * {
+  min-height: 130px;
+  color: #777;
+  resize: vertical;
+}
+.callback__form--control {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
