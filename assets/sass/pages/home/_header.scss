@@ -1,4 +1,10 @@
+.container { position: relative; }
+
 .header {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
   text-transform: capitalize;
 
   &__top {

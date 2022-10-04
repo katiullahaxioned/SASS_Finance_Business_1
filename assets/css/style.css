@@ -142,7 +142,15 @@ p::first-letter {
   margin: 0 auto;
 }
 
+.container {
+  position: relative;
+}
+
 .header {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
   text-transform: capitalize;
 }
 .header__top--wrapper {
@@ -378,6 +386,46 @@ p::first-letter {
 .header__bottom--menu a:hover {
   color: #A4C63A;
   border-color: #A4C63A;
+}
+
+.banner__wrapper {
+  width: 100%;
+  min-height: 89.3vh;
+  height: 89.3vh;
+  position: relative;
+}
+.banner__figure {
+  height: 100%;
+}
+.banner__figure img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.banner__content {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.banner__heading {
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.banner__para {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  word-spacing: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

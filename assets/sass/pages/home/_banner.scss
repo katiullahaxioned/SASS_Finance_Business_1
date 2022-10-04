@@ -1,0 +1,39 @@
+.banner {
+  &__wrapper {
+    width: 100%;
+    min-height: 89.3vh;
+    height: 89.3vh;
+    position: relative;
+  }
+
+  &__figure {
+    height: 100%;
+
+    img {
+      height: 100%;
+      @include object;
+    }  
+  }
+
+  &__content {
+    text-align: center;
+    color: $white;
+    @include position(absolute,top,62%,left,50%);
+    @include transform(translate(-50%,-50%));
+  }
+
+  &__heading {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  &__para {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    word-spacing: 2px;
+  }
+}
